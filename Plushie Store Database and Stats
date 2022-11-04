@@ -1,0 +1,26 @@
+--Create plushie store database
+
+CREATE TABLE plushies (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, size TEXT, price INTEGER);
+
+INSERT INTO plushies VALUES (1, "Fox", 4, "Large", 10.00);
+INSERT INTO plushies VALUES (2, "Bear", 7, "Small", 5.00);
+INSERT INTO plushies VALUES (3, "Dog", 5, "Small", 5.00);
+INSERT INTO plushies VALUES (4, "Cat", 6, "Large", 10.00);
+INSERT INTO plushies VALUES (5, "Panda", 8, "Small", 5.00);
+INSERT INTO plushies VALUES (6, "Shark", 2, "XL",12.00);
+INSERT INTO plushies VALUES (7, "Avocado", 3, "Medium", 7.00);
+INSERT INTO plushies VALUES (8, "Corn", 8, "Medium", 7.00);
+INSERT INTO plushies VALUES (9, "Bread", 9, "Small", 5.00);
+INSERT INTO plushies VALUES (10, "Strawberry", 4, "Medium", 7.00);
+INSERT INTO plushies VALUES (11, "Soccer", 3, "Large", 10.00);
+INSERT INTO plushies VALUES (12, "Baseball",6, "Small", 5.00);
+INSERT INTO plushies VALUES (13, "Basketball", 4, "Medium", 7.00);
+INSERT INTO plushies VALUES (14, "Football",5, "XL", 12.00);
+INSERT INTO plushies VALUES (15, "Rose", 7, "Large", 10.00);
+
+--display the database ordered by price
+SELECT * FROM plushies 
+ORDER BY price desc;
+
+--what is the total number of items in the store?
+SELECT SUM(quantity) FROM plushies
